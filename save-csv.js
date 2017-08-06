@@ -11,7 +11,7 @@
   "use strict";
   return function(arr, opts) {
     if (!Array.isArray(arr) || !arr.length) {
-      throw new Error("Expected an array");
+      throw new Error("Expected an array of values, got " + arr);
     }
 
     opts = opts || {};
