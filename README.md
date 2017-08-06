@@ -2,7 +2,7 @@
 [![](https://img.shields.io/npm/v/save-csv.svg?style=flat)](https://www.npmjs.org/package/save-csv) [![](https://img.shields.io/npm/dm/save-csv.svg)](https://www.npmjs.org/package/save-csv) [![](https://api.travis-ci.org/silverwind/save-csv.svg?style=flat)](https://travis-ci.org/silverwind/save-csv)
 > Download an array of objects as a CSV file in the browser
 
-`save-csv` is a tiny library (602 bytes gzipped) that creates a CSV file from a array of objects with matching keys and triggers a download in the browser.
+`save-csv` is a tiny library (602 bytes gzipped) that creates an CSV file from a array of objects with matching keys and triggers a download in the browser.
 
 ## Example
 ```html
@@ -17,7 +17,7 @@ saveCsv(
 
 ## API
 ### save-csv(array, [options])
-- `array` *Array*: An array containg objects with matching keys.
+- `array` *Array*: An array containing objects with matching keys.
 - `options` *Object*
   - `filename` *string*: The filename to save to. Default: `export.csv`.
   - `sep` *string*: The value separator. Default: `,`.
