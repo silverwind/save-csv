@@ -14,9 +14,10 @@
 
     opts = opts || {};
     opts.filename = opts.filename || "export.csv";
-    opts.sep = opts.set || ",";
+    opts.sep = opts.sep || ",";
     opts.eol = opts.eol || "\r\n";
     opts.bom = opts.bom || true;
+    opts.quote = opts.quote || '"';
     opts.mime = "text/csv;charset=utf-8";
 
     opts.formatter = opts.formatter || function(value) {
@@ -24,7 +25,7 @@
         value = JSON.stringify(value) || "";
       }
       if (new RegExp(opts.sep).test(value)) {
-        value = '"' + value + '"';
+        value = opts.quote + value + opts.quote;
       }
       return value;
     };
