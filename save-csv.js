@@ -9,7 +9,7 @@
   }
 })(function() {
   "use strict";
-  return function csv(arr, opts) {
+  return function(arr, opts) {
     if (!Array.isArray(arr) || !arr.length) return new Error("Invalid array passed");
 
     opts = opts || {};
@@ -19,7 +19,7 @@
     opts.bom = opts.bom || true;
     opts.mime = "text/csv;charset=utf-8";
 
-    opts.formatter = opts.formatter || function fmt(value) {
+    opts.formatter = opts.formatter || function(value) {
       if (typeof value !== "string") {
         value = JSON.stringify(value) || "";
       }

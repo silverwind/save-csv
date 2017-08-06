@@ -24,6 +24,6 @@ saveCsv(
   - `eol` *string*: The line separator. Default: `\r\n`.
   - `bom` *boolean*: Whether to include a [byte order mark](https://en.wikipedia.org/wiki/Byte_order_mark) in the output. Default: `true`.
   - `mime` *string*: The mime type for the file. Default: `text/csv;charset=utf-8`.
-  - `formatter` *Function*: A custom formatter function for values. The default function handles `,` in values and uses JSON.stringify for complex values. Receives `value`.
+  - `formatter` *Function*: A custom formatter function for values. The default function handles `sep` in values and uses JSON.stringify for complex values. Receives `value`.
 
 © [silverwind](https://github.com/silverwind), distributed under BSD licence
