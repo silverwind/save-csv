@@ -6,7 +6,7 @@
 
 ## Example
 ```html
-<script src="save-csv.js"></script>
+<script src="save-csv.min.js"></script>
 ```
 ```js
 saveCsv(
