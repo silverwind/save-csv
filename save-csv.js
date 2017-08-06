@@ -10,7 +10,9 @@
 })(function() {
   "use strict";
   return function(arr, opts) {
-    if (!Array.isArray(arr) || !arr.length) return new Error("Invalid array passed");
+    if (!Array.isArray(arr) || !arr.length) {
+      throw new Error("Expected an array");
+    }
 
     opts = opts || {};
     opts.filename = opts.filename || "export.csv";
