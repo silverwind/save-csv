@@ -15,15 +15,6 @@ saveCsv(
 );
 ```
 
-opts = opts || {};
-opts.filename = opts.filename || "export.csv";
-opts.bom = opts.bom || true;
-opts.sep = opts.set || ",";
-opts.eol = opts.eol || "\r\n";
-opts.mime = "text/csv;charset=utf-8";
-
-opts.formatter
-
 ## API
 ### save-csv(array, [options])
 - `array` *Array*: An array containg objects with matching keys.
