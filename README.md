@@ -14,6 +14,12 @@ saveCsv(
   {a:3, b:4},
 );
 ```
+The resulting file then contains
+```csv
+a,b
+1,2
+3,4
+```
 
 ## API
 ### save-csv(array, [options])
