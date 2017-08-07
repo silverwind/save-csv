@@ -53,6 +53,8 @@
     a.style.display = "none";
     document.body.appendChild(a);
     a.click();
-    setTimeout(document.body.removeChild.bind(null, a), 0);
+    setTimeout(function() {
+      document.body.removeChild(a);
+    }, 0);
   };
 });
