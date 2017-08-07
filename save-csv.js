@@ -1,4 +1,4 @@
-/*! save-csv v1.1.9 | (c) silverwind | BSD license */
+/*! save-csv v1.1.10 | (c) silverwind | BSD license */
 (function(m) {
   if (typeof exports === "object" && typeof module === "object") {
     module.exports = m();
