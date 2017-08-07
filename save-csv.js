@@ -22,7 +22,7 @@
     opts.quote = opts.quote || '"';
     opts.mime = opts.mime || "text/csv;charset=utf-8";
 
-    var quoteRe = new RegExp(opts.sep, "g");
+    var quoteRe = new RegExp(opts.quote, "g");
     var sepRe = new RegExp(opts.sep, "g");
 
     opts.formatter = opts.formatter || function(value) {
