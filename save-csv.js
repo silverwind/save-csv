@@ -18,7 +18,7 @@
     opts.filename = opts.filename || "export.csv";
     opts.sep = opts.sep || ",";
     opts.eol = opts.eol || "\r\n";
-    opts.bom = opts.bom || true;
+    opts.bom = typeof opts.bom === "boolean" ? opts.bom : true;
     opts.quote = opts.quote || '"';
     opts.mime = opts.mime || "text/csv;charset=utf-8";
 
