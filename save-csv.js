@@ -20,7 +20,7 @@
     opts.eol = opts.eol || "\r\n";
     opts.bom = opts.bom || true;
     opts.quote = opts.quote || '"';
-    opts.mime = "text/csv;charset=utf-8";
+    opts.mime = opts.mime || "text/csv;charset=utf-8";
 
     opts.formatter = opts.formatter || function(value) {
       if (typeof value !== "string") {
