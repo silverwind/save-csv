@@ -64,6 +64,7 @@
     var a = document.createElement("a");
     a.setAttribute("href", URL.createObjectURL(blob, {type: opts.mime}));
     a.setAttribute("download", opts.filename);
+    a.setAttribute("target", "_blank");
     a.style.display = "none";
     document.body.appendChild(a);
     a.click();
