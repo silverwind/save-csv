@@ -22,13 +22,27 @@
     opts.quote = opts.quote || '"';
     opts.mime = opts.mime || "text/csv;charset=utf-8";
 
+    var quoteRe = new RegExp(opts.sep, "g");
+    var sepRe = new RegExp(opts.sep, "g");
+
     opts.formatter = opts.formatter || function(value) {
+      var quoted = false;
+
       if (typeof value !== "string") {
         value = JSON.stringify(value) || "";
       }
-      if (new RegExp(opts.sep).test(value)) {
+
+      // escape quotes by doubling the quotes and wrapping in quotes
+      if (quoteRe.test(value)) {
+        value = opts.quote + value.replace(quoteRe, opts.quote + opts.quote) + opts.quote;
+        quoted = true;
+      }
+
+      // escape separator by wrapping in quotes
+      if (sepRe.test(value) && !quoted) {
         value = opts.quote + value + opts.quote;
       }
+
       return value;
     };
 
