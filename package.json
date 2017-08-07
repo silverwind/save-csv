@@ -1,6 +1,6 @@
 {
   "name": "save-csv",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Download an array of objects as a CSV file in the browser",
   "author": "silverwind",
   "repository": "silverwind/save-csv",
