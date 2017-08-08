@@ -26,7 +26,7 @@
       var sep = ["", ""].toLocaleString();
       opts.sep = sep ? sep : ",";
     } else {
-      opts.sep = ",";
+      opts.sep = opts.sep || ",";
     }
 
     var quoteRe = new RegExp(opts.quote, "g");
