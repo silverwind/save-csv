@@ -4,7 +4,7 @@
 
 `save-csv` is a tiny library (737 bytes gzipped) that creates an CSV file from a array of objects with matching keys and triggers a download in the browser. Features:
 
-- Automatically detects the value separator (usually `,`) based on the user's regional settings (For example, some EU countries use ';').
+- Automatically detects the value separator (usually `,`) based on the user's regional settings.
 - Saves UTF8 by default and helps Excel to recognize this by adding a [byte order mark](https://en.wikipedia.org/wiki/Byte_order_mark).
 - Fully configurable. Every output character can be modified via options.
 
@@ -18,7 +18,7 @@ saveCsv([
   {a:3, b:4},
 ]);
 ```
-The resulting file then contains
+#### Output
 ```csv
 a,b
 1,2
