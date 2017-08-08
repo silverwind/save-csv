@@ -2,17 +2,21 @@
 [![](https://img.shields.io/npm/v/save-csv.svg?style=flat)](https://www.npmjs.org/package/save-csv) [![](https://img.shields.io/npm/dm/save-csv.svg)](https://www.npmjs.org/package/save-csv) [![](https://api.travis-ci.org/silverwind/save-csv.svg?style=flat)](https://travis-ci.org/silverwind/save-csv)
 > Download an array of objects as a CSV file in the browser
 
-`save-csv` is a tiny library (689 bytes gzipped) that creates an CSV file from a array of objects with matching keys and triggers a download in the browser.
+`save-csv` is a tiny library (689 bytes gzipped) that creates an CSV file from a array of objects with matching keys and triggers a download in the browser. Features:
+
+- Automatically detects the value separator (usually `,`) based on the user's regional settings (For example, some EU countries use ';').
+- Saves UTF8 by default and helps Excel to recognize this by adding a [byte order mark](https://en.wikipedia.org/wiki/Byte_order_mark).
+- Fully configurable. Every output character can be modified via options.
 
 ## Example
 ```html
 <script src="save-csv.min.js"></script>
 ```
 ```js
-saveCsv(
+saveCsv([
   {a:1, b:2},
   {a:3, b:4},
-);
+]);
 ```
 The resulting file then contains
 ```csv
@@ -26,7 +30,7 @@ a,b
 - `array` *Array*: An array containing objects with matching keys.
 - `options` *Object*
   - `filename` *string*: The filename to save to. Default: `export.csv`.
-  - `sep` *string*: The value separator. Default: `,`.
+  - `sep` *string*: The value separator. Recognizes the special value `auto` with which automatic detection based on the user's regional settings is performed. Falls back to `,` when detection fails. Default: `auto`.
   - `eol` *string*: The line separator. Default: `\r\n`.
   - `quote` *string*: The quote character to use. Default: `"`.
   - `bom` *boolean*: Whether to include a [byte order mark](https://en.wikipedia.org/wiki/Byte_order_mark) in the output. Default: `true`.

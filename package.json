@@ -11,9 +11,12 @@
   "keywords": [
     "csv",
     "save",
+    "excel",
+    "export",
+    "local-aware",
     "download",
     "browser",
-    "stringify"
+    "json"
   ],
   "files": [
     "save-csv.js",
