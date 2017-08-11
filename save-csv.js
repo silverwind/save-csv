@@ -26,8 +26,12 @@
     // rather unreliable, it's a good compromise.
     // https://bugzilla.mozilla.org/show_bug.cgi?id=1388777
     // https://bugs.chromium.org/p/chromium/issues/detail?id=753841
-    if (opts.sep === "auto" && "toLocaleString" in Number.prototype) {
-      opts.sep = (1.2).toLocaleString().substring(1, 2) === "," ? ";" : ",";
+    if (opts.sep === "auto") {
+      if ("toLocaleString" in Number.prototype) {
+        opts.sep = (1.2).toLocaleString().substring(1, 2) === "," ? ";" : ",";
+      } else {
+        opts.sep = ",";
+      }
     }
 
     var quoteRe = new RegExp(opts.quote, "g");
