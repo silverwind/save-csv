@@ -30,7 +30,7 @@ a,b
 - `array` *Array*: An array containing objects with matching keys.
 - `options` *Object*
   - `filename` *string*: The filename to save to. Default: `export.csv`.
-  - `sep` *string*: The value separator. Recognizes the special value `auto` with which automatic detection based on the user's regional settings is attempted (See [#1](https://github.com/silverwind/save-csv/issues/1)). Default: `,`.
+  - `sep` *string*: The value separator (usually `,`). Recognizes the special value `auto` with which automatic detection based on the user's regional settings is attempted (See [#1](https://github.com/silverwind/save-csv/issues/1)). Default: `auto`.
   - `eol` *string*: The line separator. Default: `\r\n`.
   - `quote` *string*: The quote character to use. Default: `"`.
   - `bom` *boolean*: Whether to include a [byte order mark](https://en.wikipedia.org/wiki/Byte_order_mark) in the output. Default: `true`.
