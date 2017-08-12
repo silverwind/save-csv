@@ -58,16 +58,33 @@
       return value;
     };
 
-    // build header from first element in array
-    var header = Object.keys(arr[0]).map(function(key) {
-      return opts.formatter(key);
-    }).join(opts.sep) + opts.eol;
+    // build headers from first element in array
+    var paths = [];
+    (function scan(prefix, obj, keys) {
+      keys.forEach(function(key) {
+        var path = prefix ? prefix + "." + key : key;
+        if (typeof obj[key] === "object" && obj[key] !== null) {
+          scan(path, obj[key], Object.keys(obj[key]));
+        } else {
+          paths.push(opts.formatter(path));
+        }
+      });
+    })(null, arr[0], Object.keys(arr[0]));
+    var header = paths.join(opts.sep) + opts.eol;
 
     // build body
     var body = arr.map(function(obj) {
-      return Object.keys(obj).map(function(key) {
-        return opts.formatter(obj[key]);
-      }).join(opts.sep);
+      var row = [];
+      (function scan(obj, keys) {
+        keys.forEach(function(key) {
+          if (typeof obj[key] === "object" && obj[key] !== null) {
+            scan(obj[key], Object.keys(obj[key]));
+          } else {
+            row.push(opts.formatter(obj[key]));
+          }
+        });
+      })(obj, Object.keys(obj));
+      return row.join(opts.spe);
     }).join(opts.eol);
 
     // build a link and trigger a download
