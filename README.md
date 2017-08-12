@@ -2,7 +2,7 @@
 [![](https://img.shields.io/npm/v/save-csv.svg?style=flat)](https://www.npmjs.org/package/save-csv) [![](https://img.shields.io/npm/dm/save-csv.svg)](https://www.npmjs.org/package/save-csv) [![](https://api.travis-ci.org/silverwind/save-csv.svg?style=flat)](https://travis-ci.org/silverwind/save-csv)
 > Download an array of objects as a CSV file in the browser
 
-`save-csv` is a tiny library (755 bytes gzipped) that creates an CSV file from a array of objects with matching keys and triggers a download in the browser. Features:
+`save-csv` is a tiny library (854 bytes gzipped) that creates an CSV file from a array of objects with matching keys and triggers a download in the browser. Features:
 
 - Automatically detects the value separator (usually `,`) based on the user's regional settings.
 - Saves UTF8 by default and helps Excel to recognize this by adding a [byte order mark](https://en.wikipedia.org/wiki/Byte_order_mark).
