@@ -90,15 +90,22 @@
     // build a link and trigger a download
     var text = header + body;
     var blob = new Blob([opts.bom ? "\ufeff" + text : text]);
-    var a = document.createElement("a");
-    a.setAttribute("href", URL.createObjectURL(blob, {type: opts.mime}));
-    a.setAttribute("download", opts.filename);
-    a.setAttribute("target", "_blank");
-    a.style.display = "none";
-    document.body.appendChild(a);
-    a.click();
-    setTimeout(function() {
-      document.body.removeChild(a);
-    }, 0);
+
+    if(window.navigator.msSaveBlob){
+        window.navigator.msSaveBlob(blob, opts.filename);
+    }
+    else{
+        var a = document.createElement("a");
+        a.setAttribute("href", URL.createObjectURL(blob, {type: opts.mime}));
+        a.setAttribute("download", opts.filename);
+        a.setAttribute("target", "_blank");
+        a.style.display = "none";
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function() {
+          document.body.removeChild(a);
+        }, 0);
+    }
+
   };
 });
