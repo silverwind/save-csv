@@ -91,7 +91,7 @@
     var text = header + body;
     var blob = new Blob([opts.bom ? "\ufeff" + text : text]);
 
-    if (window.navigator.msSaveBlob) {
+    if (window.navigator.msSaveBlob) { // compat: ie10
       window.navigator.msSaveBlob(blob, opts.filename);
     } else {
       var a = document.createElement("a");
