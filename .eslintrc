@@ -187,7 +187,7 @@ rules:
   no-useless-concat: [2]
   no-useless-constructor: [2]
   no-useless-escape: [2]
-  no-var: [2]
+  no-var: [0]
   no-warning-comments: [0]
   no-whitespace-before-property: [2]
   no-with: [2]
@@ -201,7 +201,7 @@ rules:
   operator-linebreak: [2, after]
   padded-blocks: [2, never]
   prefer-arrow-callback: [0] # enable for node 6
-  prefer-const: [2]
+  prefer-const: [0]
   prefer-destructuring: [0] # enable for node 6
   prefer-numeric-literals: [2]
   prefer-promise-reject-errors: [2, {allowEmptyReject: false}]

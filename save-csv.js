@@ -91,21 +91,19 @@
     var text = header + body;
     var blob = new Blob([opts.bom ? "\ufeff" + text : text]);
 
-    if(window.navigator.msSaveBlob){
-        window.navigator.msSaveBlob(blob, opts.filename);
+    if (window.navigator.msSaveBlob) {
+      window.navigator.msSaveBlob(blob, opts.filename);
+    } else {
+      var a = document.createElement("a");
+      a.setAttribute("href", URL.createObjectURL(blob, {type: opts.mime}));
+      a.setAttribute("download", opts.filename);
+      a.setAttribute("target", "_blank");
+      a.style.display = "none";
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function() {
+        document.body.removeChild(a);
+      }, 0);
     }
-    else{
-        var a = document.createElement("a");
-        a.setAttribute("href", URL.createObjectURL(blob, {type: opts.mime}));
-        a.setAttribute("download", opts.filename);
-        a.setAttribute("target", "_blank");
-        a.style.display = "none";
-        document.body.appendChild(a);
-        a.click();
-        setTimeout(function() {
-          document.body.removeChild(a);
-        }, 0);
-    }
-
   };
 });
