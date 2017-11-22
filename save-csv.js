@@ -1,13 +1,13 @@
 /*! save-csv v4.0.2 | (c) silverwind | BSD license */
-(function(m) {
-  if (typeof exports === "object" && typeof module === "object") {
+(function(root, m) {
+  if (typeof define === "function" && define.amd) {
+    define([], m);
+  } else if (typeof module === "object" && module.exports) {
     module.exports = m();
-  } else if (typeof define === "function" && define.amd) {
-    return define([], m);
   } else {
-    this.saveCsv = m();
+    root.saveCsv = m();
   }
-})(function() {
+})(typeof self !== "undefined" ? self : this, function() {
   "use strict";
   return function(arr, opts) {
     if (!Array.isArray(arr) || !arr.length) {
