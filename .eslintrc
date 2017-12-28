@@ -9,7 +9,7 @@ rules:
   accessor-pairs: [2]
   array-bracket-newline: [0]
   array-bracket-spacing: [2, never]
-  array-callback-return: [0]
+  array-callback-return: [2]
   array-element-newline: [0]
   arrow-body-style: [0]
   arrow-parens: [2, as-needed]
@@ -187,7 +187,7 @@ rules:
   no-useless-concat: [2]
   no-useless-constructor: [2]
   no-useless-escape: [2]
-  no-var: [0]
+  no-var: [2]
   no-warning-comments: [0]
   no-whitespace-before-property: [2]
   no-with: [2]
@@ -201,7 +201,7 @@ rules:
   operator-linebreak: [2, after]
   padded-blocks: [2, never]
   prefer-arrow-callback: [0] # enable for node 6
-  prefer-const: [0]
+  prefer-const: [2]
   prefer-destructuring: [0] # enable for node 6
   prefer-numeric-literals: [2]
   prefer-promise-reject-errors: [2, {allowEmptyReject: false}]
