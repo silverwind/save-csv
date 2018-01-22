@@ -85,7 +85,7 @@
           }
         });
       })(obj, Object.keys(obj));
-      return row.join(opts.spe);
+      return row.join(opts.sep);
     }).join(opts.eol);
 
     // build a link and trigger a download
