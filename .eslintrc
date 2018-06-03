@@ -1,2 +1,6 @@
 root: true
 extends: eslint-config-silverwind
+
+rules:
+  no-var: [0]
+  prefer-arrow-callback: [0]

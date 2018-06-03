@@ -1,5 +1,4 @@
 /*! save-csv v4.0.5 | (c) silverwind | BSD license */
-/* eslint-disable no-var */
 (function(root, m) {
   if (typeof define === "function" && define.amd) {
     define([], m);
