@@ -15,7 +15,7 @@
     "save",
     "excel",
     "export",
-    "local-aware",
+    "locale-aware",
     "download",
     "browser",
     "json"
@@ -25,11 +25,11 @@
     "save-csv.min.js"
   ],
   "devDependencies": {
-    "eslint": "^4.16.0",
+    "eslint": "^4.19.1",
+    "eslint-config-silverwind": "^1.0.42",
     "gzip-size-cli": "^2.1.0",
-    "npm-check-updates": "^2.14.0",
     "semver": "^5.5.0",
-    "uglify-js": "^3.3.8",
-    "updates": "^2.1.0"
+    "uglify-js": "^3.4.0",
+    "updates": "^3.0.0"
   }
 }
