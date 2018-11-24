@@ -25,11 +25,11 @@
     "save-csv.min.js"
   ],
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-silverwind": "^1.0.42",
-    "gzip-size-cli": "^2.1.0",
-    "semver": "^5.5.0",
-    "uglify-js": "^3.4.0",
-    "updates": "^3.0.0"
+    "eslint": "^5.9.0",
+    "eslint-config-silverwind": "^2.0.10",
+    "gzip-size-cli": "^3.0.0",
+    "semver": "^5.6.0",
+    "uglify-js": "^3.4.9",
+    "updates": "^5.3.0"
   }
 }
