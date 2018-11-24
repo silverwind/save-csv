@@ -1,4 +1,4 @@
-/*! save-csv v4.0.7 | (c) silverwind | BSD license */
+/*! save-csv v4.1.0 | (c) silverwind | BSD license */
 (function(root, m) {
   if (typeof define === "function" && define.amd) {
     define([], m);
